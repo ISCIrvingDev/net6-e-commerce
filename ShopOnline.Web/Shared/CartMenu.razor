@@ -9,6 +9,7 @@
 @code {
     private int ShoppingCartItemCount { get; set; } = 0;
 
+    // Ciclos de Vida - Metodos - Inicio
     protected override void OnInitialized()
     {
         //base.OnInitialized();
@@ -16,18 +17,19 @@
         shoppingCartService.OnShoppingCartChanged += ShoppingCartChanged;
     }
 
+    // Para evitar leak memory
+    void IDisposable.Dispose()
+    {
+        // Desuscribe (unsubscribe) "OnShoppingCartChanged" al evento "ShoppingCartChanged"
+        shoppingCartService.OnShoppingCartChanged -= ShoppingCartChanged;
+    }
+    // Ciclos de Vida - Metodos - Fin
+
     protected void ShoppingCartChanged(int totalQty)
     {
         this.ShoppingCartItemCount = totalQty;
 
         // Es una manera explicita de decirle a Blazor que vuelva a reenderizar este componente
         StateHasChanged();
-    }
-
-    // Para evitar leak memory
-    void IDisposable.Dispose()
-    {
-        // Desuscribe (unsubscribe) "OnShoppingCartChanged" al evento "ShoppingCartChanged"
-        shoppingCartService.OnShoppingCartChanged -= ShoppingCartChanged;
     }
 }

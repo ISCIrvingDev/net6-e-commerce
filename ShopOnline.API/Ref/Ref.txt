@@ -1,0 +1,29 @@
+  // Ref
+https://www.youtube.com/watch?v=sHuuo9L3e5c
+⌨️ (0:00:00) Introduction
+⌨️ (0:00:51) Create the Database using EF Core Code First Database Migrations
+⌨️ (0:26:05) Retrieve Product Data from Database (Web API component)
+⌨️ (0:30:17) Create Classes for Data Transfer Objects (DTOs)
+⌨️ (0:36:22) Create ProductRepository Class (Repository Design Pattern)
+⌨️ (0:43:05) Create ProductController Class
+⌨️ (0:51:08) Create DtoConversion Class (DTO Conversion Extension methods)
+⌨️ (0:57:45) Display Product Data to User (Blazor WebAssembly Component)
+⌨️ (1:39:59) Display Data for Specific Product to User (Web API and Blazor)
+⌨️ (2:06:07) Add Product to Shopping Cart (Web API and Blazor)
+⌨️ (2:52:40) Remove Product from Shopping Cart (Web API and Blazor)
+⌨️ (3:14:03) Update the Quantity of Products in the Shopping Cart (Web API, Blazor, Blazor JavaScript Interoperability)
+⌨️ (3:44:01) Update the Header Menu in Response to a Change to the State of the Shopping Cart (Creating Custom Events in Blazor)
+⌨️ (4:04:48) Integration of PayPal Payment Gateway into Blazor Component
+⌨️ (4:36:03) Dynamically Populate the Side-Bar Menu (Web API and Blazor)
+⌨️ (5:05:44) Optimise Code for Performance (Web API and Blazor)
+⌨️ (5:08:26) Use Include Extension Method in LINQ Query (Web API)
+⌨️ (5:14:00) User Local Storage Functionality (Blazor)
+⌨️ (5:35:42) Outro
+
+https://github.com/GavinLonDigital/ShopOnlineSolution/
+
+https://www.c-sharpcorner.com/article/get-connectionstring-for-sql-server/
+
+  // Video
+Blazor WebAssembly & Web API on .NET 6
+  Min -> 3:52:35 -> ShopOnline.Solution\ShopOnline.Web\Pages\ProductsBase.cs -> Me quede en la linea 30

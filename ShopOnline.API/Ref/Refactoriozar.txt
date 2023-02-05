@@ -1,0 +1,13 @@
+* Transformar las vistas en modulos
+
+* Implementacion de componentes globales
+  ** Modal
+  ** Alert
+
+* Corregir los "Services" para que puedan trabajar con el "Alert" y el "Modal"
+
+* Display Spinner
+  ** Cambiarlos a Loading
+
+* Crear la estructura base
+  ** Pasar Shared a Application/Components

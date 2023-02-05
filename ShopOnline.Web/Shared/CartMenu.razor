@@ -1,0 +1,33 @@
+﻿@implements IDisposable
+@inject IShoppingCartService shoppingCartService;
+
+<a href="/ShoppingCart" class="btn btn-info">
+    <i class="oi oi-cart"></i> Cart
+    <span class="badge bg-dark">@ShoppingCartItemCount</span>
+</a>
+
+@code {
+    private int ShoppingCartItemCount { get; set; } = 0;
+
+    protected override void OnInitialized()
+    {
+        //base.OnInitialized();
+        // Suscribe (subscribe) "OnShoppingCartChanged" al evento "ShoppingCartChanged"
+        shoppingCartService.OnShoppingCartChanged += ShoppingCartChanged;
+    }
+
+    protected void ShoppingCartChanged(int totalQty)
+    {
+        this.ShoppingCartItemCount = totalQty;
+
+        // Es una manera explicita de decirle a Blazor que vuelva a reenderizar este componente
+        StateHasChanged();
+    }
+
+    // Para evitar leak memory
+    void IDisposable.Dispose()
+    {
+        // Desuscribe (unsubscribe) "OnShoppingCartChanged" al evento "ShoppingCartChanged"
+        shoppingCartService.OnShoppingCartChanged -= ShoppingCartChanged;
+    }
+}
